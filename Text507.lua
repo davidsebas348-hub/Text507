@@ -1528,6 +1528,7 @@ for i,menu in ipairs(menuOrder) do
         menu,
         10 + ((i-1)*35),
         function()
+            rightFrame.CanvasPosition = Vector2.new(0, 0)
 
             clearFrame(rightFrame)
 
