@@ -916,6 +916,11 @@ local function createMenuButton(
 
     b.BorderSizePixel = 0
 
+    local border = Instance.new("UIStroke")
+border.Color = Color3.fromRGB(0,0,0)
+border.Thickness = 1
+border.Parent = b
+
     -- COLOR DEL TEXTO
     local configuredColor =
         leftMenuTextColors[text]
