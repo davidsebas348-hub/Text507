@@ -1,3 +1,6 @@
+-- ======================
+-- SBS HUB COMPLETO FINAL  (TSB)
+-- ======================
 repeat task.wait() until game:IsLoaded()
 
 local screenGui = Instance.new("ScreenGui")
@@ -57,6 +60,7 @@ local leftMenuTextColors = {
     ["TELEPORT"] = Color3.fromRGB(0,170,255),
     ["LABELS"] = Color3.fromRGB(255,255,0),
     ["FPS"] = Color3.fromRGB(255,0,255),
+    ["GAMEPASS"] = Color3.fromRGB(255, 255, 0),
     ["YOUTUBE"] = Color3.fromRGB(255,0,0),
 
 }
@@ -105,8 +109,11 @@ local buttonDescriptions = {
     ["LOCALPLAYER"] =
         "Modifica las opciones relacionadas con tu jugador.",
 
+    ["MAS ESPACIO PARA EMOTES"] =
+        "Tener un total de 8 espacio.",
+
     ["ESP ULTI"] =
-        "Muestra información visual relacionada con la habilidad.",
+        "Muestra cuanto tiene de ultime.",
 
     ["RESET STATS"] =
         "Restablece las estadísticas modificadas del jugador.",
@@ -1423,17 +1430,7 @@ end
 -- MENÚ
 --==================================================
 
-local menuOrder = {
-
-    "MAIN",
-    "ESP",
-    "COMBATE",
-    "AUTO",
-    "TELEPORT",
-    "LABELS",
-    "FPS",
-}
-
+local menuOrder = {"MAIN","ESP","COMBATE","GAMEPASS","AUTO","TELEPORT","LABELS","FPS"}
 local menuData = {
 
     ["MAIN"] = {
@@ -1455,6 +1452,11 @@ local menuData = {
     ["ESP"] = {
 
         "ESP ULTI",
+
+    },
+
+    ["GAMEPASS"] = {
+        "MAS ESPACIO PARA EMOTES",
 
     },
 
@@ -1484,15 +1486,14 @@ local menuData = {
     },
 
     ["LABELS"] = {
-
         "CONTADOR DE PING",
         "CONTADOR DE FPS",
 
     },
 
     ["FPS"] = {
-
         "Fps Boost",
+        "CAMBIAR FPS",
 
     },
 
@@ -1793,12 +1794,7 @@ for i,menu in ipairs(menuOrder) do
 
                             pcall(function()
 
-                                loadstring(
-                                    game:HttpGet(
-                                        "https://raw.githubusercontent.com/davidsebas348-hub/Text468/refs/heads/main/Text468.lua"
-                                    )
-                                )()
-
+                          loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text468/refs/heads/main/Text468.lua"))()
                             end)
 
                         elseif opt ==
