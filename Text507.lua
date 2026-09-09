@@ -115,6 +115,9 @@ local buttonDescriptions = {
     ["ESP ULTI"] =
         "Muestra cuanto tiene de ultime.",
 
+    ["ESP DEATH COUNTER"] =
+        "Muestra quien tiene el counter de saitama mostrando una💀.",
+
     ["RESET STATS"] =
         "Restablece las estadísticas modificadas del jugador.",
 
@@ -1450,7 +1453,7 @@ local menuData = {
     },
 
     ["ESP"] = {
-
+        "ESP DEATH COUNTER",
         "ESP ULTI",
 
     },
@@ -1790,24 +1793,15 @@ for i,menu in ipairs(menuOrder) do
                             end)
 
                         elseif opt ==
-                            "AUTO MATAR A TODOS" then
-
+                            "ESP DEATH COUNTER" then
                             pcall(function()
-
-                          loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text468/refs/heads/main/Text468.lua"))()
+                          loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text249/refs/heads/main/Text249.lua"))()
                             end)
 
                         elseif opt ==
                             "DESYNC" then
-
                             pcall(function()
-
-                                loadstring(
-                                    game:HttpGet(
-                                        "https://raw.githubusercontent.com/davidsebas348-hub/Text428/refs/heads/main/Text428.lua"
-                                    )
-                                )()
-
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text428/refs/heads/main/Text428.lua"))()
                             end)
 
                         elseif opt ==
